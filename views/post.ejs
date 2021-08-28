@@ -1,0 +1,39 @@
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <a href="/posts/<%= post[0].category_name %>">
+                <div class="post-category">
+                    <%= post[0].category_name %>
+                </div>
+            </a>
+
+            <div class="post-title">
+                <%= post[0].title %>
+            </div>
+            <div class="author-details">
+                <div><i class="fas fa-pen"></i> <%= post[0].author %></div>
+                <div>Date: <%= post[0].created_at.toLocaleDateString('en-GB') %></div>
+            </div>
+            <div class="post-content">
+                <%- post[0].content %>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="latest-posts-side-bar">
+                <div class="title-bar">
+                    More Posts
+                </div>
+                <% latest_posts.forEach(function(post){ %>
+                <a href="/post/<%=  post.slug %>" style="text-decoration: none;">
+                    <div class="side-bar-post">
+                        <!-- <div class="thumbnail"></div> -->
+                        <div class="title"><strong><%= post.title %></strong></div>
+                        <div class="author"><%= post.author %></div>
+                    </div>
+                </a>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</div>

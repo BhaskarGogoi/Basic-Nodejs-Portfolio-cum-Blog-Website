@@ -1,0 +1,23 @@
+<!-- Main Content -->
+<div class="post-category-banner">
+    <p> <%= category %></p>
+</div>
+<div class="container">
+    <div class="row">
+        <% for(var i=0; i < obj.length; i++) { %>
+        <div class="col-sm-4">
+            <a href="/post/<%=  obj[i].slug %>" style="text-decoration: none; color: inherit;">
+                <div class="post-card">
+                    <div class="post-card-body">
+                        <div class="post-card-author"><i class="fas fa-user-edit"></i> <%= obj[i].author %></div>
+                        <div class="post-card-title"><%= obj[i].title %></div>
+                        <div class="post-card-text">
+                            <p><%- obj[i].content %></p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <% } %>
+    </div>
+</div>

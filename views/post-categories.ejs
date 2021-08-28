@@ -1,0 +1,24 @@
+<div class="post-category-banner">
+    <p> Posts</p>
+</div>
+<div class="container">
+    <div class="row">
+        <% categories.forEach((category) => { %>
+        <div class="col-sm-4">
+            <a href="/posts/<%= category.category_name %>" style="text-decoration: none;">
+                <div class="post-category-card">
+                    <%= category.category_name %>
+                </div>
+            </a>
+        </div>
+        <% }) %>
+        <div class="col-sm-4">
+            <a href="https://drive.google.com/file/d/1lPExWxkWk1RJeUM-dOU1gISuXAIRguWJ/view?usp=sharing"
+                style="text-decoration: none;">
+                <div class="post-category-card">
+                    স্মৃতি গ্ৰন্থ
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
