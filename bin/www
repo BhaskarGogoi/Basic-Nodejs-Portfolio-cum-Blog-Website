@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('poetanupamkumar.in:server');
+var debug = require('debug')('portfolio-cum-blog:server');
 var http = require('http');
 
 /**
